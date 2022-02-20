@@ -1,5 +1,3 @@
-use std::sync::mpsc::Receiver;
-
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
