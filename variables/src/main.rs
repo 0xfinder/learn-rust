@@ -1,9 +1,9 @@
 fn main() {
-    let mut x = 5;
+    println!("Hello, world!");
 
-    println!("The value of x is {}", x);
+    another_function();
+}
 
-    x = 6;
-
-    println!("The value of x is {}", x);
+fn another_function() {
+    println!("Another function.");
 }
