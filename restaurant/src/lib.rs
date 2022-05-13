@@ -22,10 +22,12 @@ pub fn eat_at_restaurant() {
     meal.toast = String::from("Wheat");
     println!("I'd like {} toast please!", meal.toast);
 
-    let order1 = back_of_house::Appetizer::Salad;
+    let _order1 = back_of_house::Appetizer::Salad;
 }
 
-fn serve_order() {}
+fn serve_order() {
+    println!("Serving order");
+}
 
 mod back_of_house {
     fn fix_incorrect_order() {
