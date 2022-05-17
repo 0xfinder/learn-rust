@@ -1,5 +1,5 @@
 use dev::{Tweet, Summary};
-
+use std::fmt::{Display, Debug};
 
 fn main() {
     let number_list = vec![34, 50, 25, 100, 65];
@@ -16,7 +16,7 @@ fn main() {
     println!("1 new tweet, {}", tweet.summarize());
 }
 
-fn largest<T>(list: &[T]) -> T {
+fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
     let mut largest = list[0];
 
     for &number in list.iter() {
@@ -26,4 +26,13 @@ fn largest<T>(list: &[T]) -> T {
     }
 
     largest
+}
+
+
+// wtf is wrong w the formatting
+fn some_function<T, U>(t: T, u: U) -> i32 
+    where T: Display + Clone,
+        U: Clone + Debug
+{
+        5
 }
